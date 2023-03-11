@@ -1,37 +1,31 @@
-package programs;
-import java.util.Scanner;
+import java.util.Scanner; //prime
+class Rough
+{
+	public static void main(String[] args)
+	{
+		Scanner s = new Scanner(System.in);
 
-
-public class prime {
-
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Number :");
+		int num = s.nextInt();
 		
-		System.out.print("Enter Any Number :  ");
-		int num = sc.nextInt();
-		
-		if (num<=1)
+		boolean flag = true;
+		int i = 2;
+
+		while (i<num)
 		{
-			System.out.println(num + " is not a prime number");
-		}
-		else
-		{
-			for (int i=2;i<num;i++)
+			if (num%i==0)
 			{
-				if (num%i == 0)
-				{
-					System.out.println(num + " is not a prime number");
-					break;
-				}
-				else 
-				{
-					System.out.println(num + " is a prime number");
-					break;
-				}
+				System.out.println(num + "is a non-prime number");
+				flag = false;
+				break;
 			}
+			i++;
 		}
-	
 
+		if (flag==true)
+		{
+			System.out.println(num+" Is a Prime number");
+		}
+		
 	}
-
 }
