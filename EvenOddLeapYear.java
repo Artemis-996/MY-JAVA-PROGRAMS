@@ -15,7 +15,7 @@ class EvenOddLeapYear
 		int counto = 0;
 		
 		System.out.println("***EVEN LEAP YEAR***");
-		for (int a = start;a<=end ; a++ )
+		for (int a = start;a<=end ; a++)
 		{
 			if ((a % 4 == 0 && a%100 !=0)  || a%400==0)
 			{
