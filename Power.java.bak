@@ -18,7 +18,7 @@ class Power
 			ans = ans*base;
 			pow--;
 		}
-		System.out.println()ans;
+		System.out.println(ans);
 
 	}
 }
