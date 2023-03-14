@@ -1,0 +1,21 @@
+import java.util.Scanner;
+class Sum //Sum of digits of number ex. 123 = 1+2+3 = 6
+{
+	public static void main(String[] args) 
+	{
+		Scanner s = new Scanner(System.in);
+
+		System.out.println("Enter Number");
+		int num = s.nextInt();
+		
+		int sum = 0;
+
+		while (num>0)
+		{
+			rem = num%10;
+			sum = sum+rem;
+			num/=10;
+		}
+		System.out.println("The sum of digits is "+sum);
+	}
+}
