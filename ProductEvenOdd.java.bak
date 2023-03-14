@@ -1,0 +1,32 @@
+import java.util.Scanner;
+class ProductEvenOdd 
+{
+	public static void main(String[] args) 
+	{
+		Scanner s = new Scanner(System.in);
+
+		System.out.println("Enter Number  :  ");
+		int num = s.nextInt();
+
+		int epro = 1;
+		int opro = 1;
+
+		while (num>0)
+		{
+			int rem = num%10;
+
+			if (rem%2 == 0)
+			{
+				int epro = epro*rem;				
+			}
+			if (rem%2 != 0)
+			{
+				int opro = opro*rem;				
+			}
+			num/=10;
+		}
+		System.out.println("Product of even number is  : "+ epro);
+		System.out.println("Product of odd number is  : "+ opro);
+		
+	}
+}
