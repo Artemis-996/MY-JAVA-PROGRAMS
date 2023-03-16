@@ -42,6 +42,15 @@ class CountEvenOddFactors
 		}
 		System.out.println("The Count of odd factors is "+ ocount);
 
+		if (ecount>ocount)
+		{
+			System.out.println("The count of even factors is more");
+		}
+		else
+		{
+			System.out.println("The count of odd factors is more");
+		}
+
 	
 	}
 }
