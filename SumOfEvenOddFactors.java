@@ -10,36 +10,28 @@ class SumOfEvenOddFactors
 		int esum = 0;
 		int osum = 0;
 		
-		int edin = 1;
-		int odin = 1;
+		int din = 1;
 		
 		System.out.println("***EVEN SUM***");
-		while (edin<=num/2)
+		while (din<=num/2)
 		{
-			if (num%edin==0)
+			if (num%din==0)
 			{
-				if (edin%2==0)
+				if (din%2==0)
 				{
-				esum+=edin;
-				
+				esum+=din;
+				}
+				else
+				{
+				osum+=din;
 				}
 			}
-			edin++;
+			din++;
 		}
 		System.out.println("The sum of even Factors is "+ esum);
 
 		System.out.println("***ODD SUM***");
-		while (odin<=num/2)
-		{
-			if (num%odin==0)
-			{
-				if (odin%2!=0)
-				{
-				osum+=odin;
-				}
-			}
-			odin++;
-		}
+	
 		System.out.println("The sum of odd Factors is "+ osum);
 	}
 }
