@@ -1,4 +1,4 @@
-class PatternDiagonal 
+class PatternSwastika
 {
 	public static void main(String[] args) 
 	{
