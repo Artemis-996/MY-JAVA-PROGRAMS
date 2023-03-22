@@ -1,0 +1,31 @@
+import java.util.Scanner;   //ex :- 12345 to power 2 = 1*1+2*2+3*3+4*4+5*5 = 55
+class SumOfPowerOfDigit 
+{
+	public static void main(String[] args) 
+	{
+		Scanner s = new Scanner (System.in);
+		System.out.println("Enter Number");
+		int num = s.nextInt();
+
+		System.out.println("Enter Power(Raise)");
+		int raise = s.nextInt();
+
+		int temp = num;
+		int sum = 0;
+
+		while (temp>0)
+		{
+			int rem = temp%10;
+
+			int power = 1;					
+			for (int i=0;i<raise ;i++ )
+			{
+				power = power*rem;
+			}
+			sum += power;
+			temp/=10;
+			
+		}
+		System.out.println(sum);
+	}
+}
