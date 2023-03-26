@@ -13,20 +13,27 @@ class FibonacciSeriesRange
 		int n2 = 1;
 		int n3;
 
-		while (true)
+		while (start<=end)
 		{
-			n3 = n1+n2;
-			if (n1>=start && n1<=end)
-			{
-				System.out.println(n1);
-			}
-			if (n1>end)
-			{
-				break;
-			}
-			n1=n2;
-			n2=n3;
+				System.out.println(start+" start");
+				while (true)
+				{
+					n3 = n1+n2;
+					System.out.println(n1+" n1");
+					if (n1==start)
+					{
+						System.out.println(n1);
+						break;
+					}
+					else if (n1>start)
+					{
+					break;
+					}
+					n1=n2;
+					n2=n3;
+				}
+			start++;
 		}
-		
+
 	}
 }
