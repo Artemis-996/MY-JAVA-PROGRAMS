@@ -1,0 +1,50 @@
+import java.util.Scanner;     //product of even odd digits in number
+class StrongNumber
+{
+	public static void main(String[] args) 
+	{
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter Number :");
+		int start = s.nextInt();
+		
+		System.out.println("Enter Number :");
+		int end = s.nextInt();
+		while (start<=end)
+		{
+			if (isStrong(start))
+		{
+			System.out.println(start);
+		}
+		start++;
+		}
+		
+		
+		
+	}
+
+
+	public static int fact(int num)
+	{
+		int fact = 1;
+		for (int i=1;i<=num ;i++ )
+		{
+			fact = fact*i;
+		}
+		return fact;
+	}
+
+	public static boolean isStrong(int num)
+	{
+		int sum = 0;
+		int temp = num;
+		while(num>0)
+		{
+			int rem = num%10;
+			sum = sum + fact(rem);
+			num/=10;
+		}
+		
+		return sum==temp?true:false;
+	}
+	
+}
